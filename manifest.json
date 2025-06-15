@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Kanji Jump Linker",
+  "version": "1.0",
+  "description": "Links Kanji characters to Kanji Jump explanations.",
+  "permissions": [ "activeTab", "tabs" ],
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "content.js" ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "browser_action": {
+    "default_title": "Kanji Jump Linker"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "off.elektroney@gmail.com"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
